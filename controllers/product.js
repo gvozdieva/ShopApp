@@ -25,7 +25,9 @@ const getList = async (params) => {
   const products = docs.map((doc) => {
     // console.log(doc);
     doc.toObject({ getters: true, virtuals: true });
+    return doc;
   });
+
 
   return products;
 };
